@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Get elements
     var lyricsInput = document.getElementById('lyrics-input');
-    var submitButton = document.getElementById('submit-button');
     var lyricsTable = document.getElementById('lyrics-table');
     var lyricCells = document.querySelectorAll('#lyrics-table td');
 
@@ -38,5 +37,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 lyricsInput.value = ''; // Clear the input for the next attempt
             }
         }
+
+        // Check if all words are active
+        var allWordsActive = Array.from(lyricCells).every(cell => cell.classList.contains('active'));
+        if (allWordsActive) {
+            displayMissionComplete();
+        }
+    }
+
+    // Function to display "Mission Complete" message
+    function displayMissionComplete() {
+        var missionCompleteMessage = document.createElement('div');
+        missionCompleteMessage.textContent = 'Mission Complete';
+        missionCompleteMessage.style.color = 'green';
+        missionCompleteMessage.style.fontWeight = 'bold';
+        missionCompleteMessage.style.marginTop = '20px';
+        lyricsTable.parentElement.insertBefore(missionCompleteMessage, lyricsTable);
     }
 });
