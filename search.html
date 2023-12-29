@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1 {
+            margin: 0;
+        }
+
+        #song-search {
+            margin: 20px;
+        }
+
+        #lyrics-input {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        #submit-btn {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #word-list {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lyrics Quiz</h1>
+    </header>
+    <div id="song-search">
+        <input type="text" id="lyrics-input" placeholder="Enter a song + artist">
+        <button id="submit-btn">Submit</button>
+    </div>
+    <div id="word-list"></div>
+</body>
+</html>
